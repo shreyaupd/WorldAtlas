@@ -309,6 +309,7 @@ nav ul {
 .footer-contact {
   height: 10rem;
   display: flex;
+  justify-content: center;
   gap: 2.4rem;
   align-items: center;
 
@@ -357,9 +358,8 @@ ul {
 
 .copyright-area {
   background: #202020;
-  padding: 25px 0;
-}
-.copyright-text p {
+  padding: 25px;
+  padding-right: 12;
   margin: 0;
   font-size: 14px;
   color: #878787;

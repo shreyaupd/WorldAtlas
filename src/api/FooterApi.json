@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "MdPlace",
+    "title": "Find us",
+    "details": "Koteshowr, Kathmandu"
+  },
+  {
+    "icon": "IoCallSharp",
+    "title": "Call us",
+    "details": "9846543211"
+  },
+  {
+    "icon": "TbMailPlus",
+    "title": "Mail us",
+    "details": "contact@kodyfier.com"
+  }
+]
