@@ -7,6 +7,7 @@ import Contact from './pages/Contact.jsx'
 import Country from './pages/Country.jsx'
 import Error from './pages/Error.jsx'
 import AppLayout from './components/AppLayout.jsx'
+import CountryDetails from './components/CountryDetails.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 const App = () => {
@@ -31,6 +32,10 @@ const App = () => {
             {
               path: '/country',
               element: <Country />,
+            },
+             {
+              path: '/country/:id',
+              element: <CountryDetails/>,
             },
           ],
         }
