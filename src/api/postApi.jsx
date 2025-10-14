@@ -8,7 +8,10 @@ const fetchCountries = () => {
   return api.get('all?fields=name,population,region,capital,flags')
 }
 
-export default fetchCountries
+const getCountryEndData = (countryName) => {
+  return api.get(`/name/${countryName}?fields=name,population,region,capital,flags,subregion,tld,currencies,languages,nativeName`)
+}
+export { fetchCountries, getCountryEndData }
 
 // This code creates an axios API instance (api) with base URL https://restcountries.com/v3.1/.
 
