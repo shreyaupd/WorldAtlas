@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { CountryContext } from '../utils/CountryContext'
 const SearchFilter = () => {
-    const { filter, setfilter, search, setsearch}= useContext(CountryContext)
+    const { filter, setfilter, search, setsearch, sortCountries}= useContext(CountryContext)
     const handleSelectChange=(e)=>{
         e.preventDefault();
         setfilter(e.target.value);
@@ -23,7 +23,12 @@ const SearchFilter = () => {
           onChange={handleInputChange}
         />
       </div>
-
+          <div>
+            <button onClick={()=>sortCountries("asc")}>Asc</button>
+          </div>
+          <div>
+            <button onClick={()=>sortCountries("des")}>Desc</button>
+          </div>
         <div>
         <select
           className="select-section"
