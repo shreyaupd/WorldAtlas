@@ -6,9 +6,7 @@ import Loader from "../UI/Loader"; // ✅ Remove curly braces
 export const CountryDetails = () => {
   const params = useParams();
   const [isPending, startTransition] = useTransition();
-  const [country, setCountry] = useState();
-//   const [error, setError] = useState(null);
-
+   const [country, setCountry] = useState();
   useEffect(() => {
     startTransition(async()=>{
     try {
@@ -49,9 +47,9 @@ return (
               <div className="infoContainer">
                 <p>
                   <span className="card-description"> Native Names:</span>
-                  {Object.keys(country.name.nativeName)
-                    .map((key) => country.name.nativeName[key].common)
-                    .join(", ")}
+                  {Object.keys(country.name.nativeName) //convert object keys to array
+                    .map((key) => country.name.nativeName[key].common)//for each key (like "deu", "fra", "ita"),you extract the "common" field — the common native name in that language.
+                    .join(", ")} //This merges all the common native names into a single readable string
                 </p>
                 <p>
                   <span className="card-description"> Population: </span>

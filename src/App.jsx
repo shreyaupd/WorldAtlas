@@ -8,6 +8,7 @@ import Country from './pages/Country.jsx'
 import Error from './pages/Error.jsx'
 import AppLayout from './components/AppLayout.jsx'
 import CountryDetails from './components/CountryDetails.jsx'
+import CountryProvider, { CountryContext } from './utils/CountryContext.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
           path: '/',
           element: <AppLayout />,
           errorElement: <Error />,
-          children: [
+          children:[
             {
               path: '/',
               element: <Home />,
@@ -31,18 +32,25 @@ const App = () => {
             },
             {
               path: '/country',
-              element: <Country />,
+              element: (
+                <CountryProvider>
+                  <Country />
+                </CountryProvider>
+              ),
             },
-             {
+            {
               path: '/country/:id',
               element: <CountryDetails/>,
             },
-          ],
+          ]
         }
       ])
+
   return (
-    <RouterProvider router={router} />
-  )
+   
+      <RouterProvider router={router} />
+    
+  );
 }
 
-export default App
+export default App;
