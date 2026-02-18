@@ -12,7 +12,7 @@ const Country = () => {
 
   useEffect(() => {
     startTransition(async () => {
-      const res = await fetchCountries()
+      const res = await fetchCountries() 
       setCountries(res.data)
     })
   }, [])
@@ -23,7 +23,7 @@ const Country = () => {
 
   const searchedCountry = (country) => {
     if (search) {
-      return country.name.common.toLowerCase().includes(search.toLowerCase())
+      return country.name.common.toLowerCase().includes(search.toLowerCase()) //
     }
     return true
   }

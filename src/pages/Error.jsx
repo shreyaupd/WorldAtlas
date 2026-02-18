@@ -2,7 +2,7 @@ import React from "react";
 import { useRouteError, Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 const Error = () => {
-  const err = useRouteError();
+  const err = useRouteError(); 
   console.log(err);
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-slate-500">

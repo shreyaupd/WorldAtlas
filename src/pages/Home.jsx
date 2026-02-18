@@ -29,7 +29,7 @@ const Home = () => {
       );
     });
     return () => ctx.revert();   
-  }, [])
+  }, []) //set animation such that when the home page is loaded the heading and image will animate in and when the animation is complete the about section will be animated in as well
 
   return (
   <div>
